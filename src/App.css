@@ -1,0 +1,255 @@
+:root {
+  --fs-primary: #200357;
+  --fs-secondary: #6c757d;
+  --fs-success: #198754;
+  --fs-danger: #dc3545;
+  --fs-bg: #f8f9fa;
+  --fs-card-bg: #ffffff;
+  --fs-card-shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* ================= GENERAL ================= */
+body {
+  background-color: var(--fs-bg);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--fs-primary);
+}
+
+p {
+  color: var(--fs-secondary);
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  background-color: var(--fs-primary) !important;
+  padding: 15px 0;
+}
+
+.navbar .nav-link {
+  color: #fff !important;
+  margin-right: 12px;
+  transition: 0.2s;
+}
+
+.navbar .nav-link:hover {
+  opacity: 0.8;
+}
+
+.navbar .nav-link.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* ================= HERO ================= */
+.hero-section {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  padding: 60px 0;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.hero-section p {
+  margin-top: 15px;
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+}
+
+.hero-img {
+  max-height: 400px;
+  object-fit: contain;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* ================= CARDS ================= */
+.card {
+  background-color: var(--fs-card-bg);
+  box-shadow: 0 4px 8px var(--fs-card-shadow);
+  border: none;
+  border-radius: 12px;
+  transition: 0.2s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px var(--fs-card-shadow);
+}
+
+.card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* ================= BUTTONS ================= */
+.btn-primary {
+  background-color: var(--fs-primary);
+  border-color: var(--fs-primary);
+}
+
+.btn-primary:hover {
+  filter: brightness(0.9);
+}
+
+.btn-secondary {
+  background-color: var(--fs-secondary);
+  border-color: var(--fs-secondary);
+}
+
+.btn-secondary:hover {
+  filter: brightness(0.9);
+}
+
+/* ================= FORMS ================= */
+.form-control:focus {
+  border-color: var(--fs-primary);
+  box-shadow: 0 0 0 0.25rem rgba(32, 3, 87, 0.25);
+}
+
+/* ================= BADGES ================= */
+.badge {
+  background-color: var(--fs-primary);
+  color: #fff;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  background-color: var(--fs-primary);
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* ================= UTILITIES ================= */
+.text-primary-custom {
+  color: var(--fs-primary) !important;
+}
+
+.bg-primary-custom {
+  background-color: var(--fs-primary) !important;
+}
+
+/* ================= PRODUCT GRID ================= */
+.products-grid {
+  padding: 40px 0;
+}
+
+.product-card img {
+  width: 100%;
+}
+.product-card {
+  border-radius: 14px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Image */
+.product-image-wrapper {
+  overflow: hidden;
+}
+
+.product-img {
+  height: 220px;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-img {
+  transform: scale(1.08);
+}
+
+/* Text */
+.product-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--fs-primary);
+  margin-bottom: 8px;
+}
+
+.product-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--fs-success);
+  margin-bottom: 5px;
+}
+
+.product-category {
+  font-size: 0.85rem;
+  color: var(--fs-secondary);
+}
+
+/* Buttons spacing */
+.product-card .btn {
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+/* Smooth UI */
+.product-card .btn:active {
+  transform: scale(0.97);
+}
+
+.checkout-page {
+  min-height: 80vh;
+}
+
+.checkout-card {
+  background-color: var(--fs-card-bg);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px var(--fs-card-shadow);
+  transition: 0.3s;
+}
+
+.checkout-card:hover {
+  transform: translateY(-3px);
+}
+
+.checkout-card .form-control {
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.checkout-card .btn {
+  border-radius: 8px;
+  padding: 10px;
+  font-weight: 500;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .hero-section p {
+    text-align: center;
+  }
+
+  .hero-section .btn {
+    display: block;
+    margin: 0 auto;
+  }
+}
